@@ -32,11 +32,9 @@ io.on("connection", (socket)=>{
 });
 // app.use(express.static(__dirname,"../frontend/build"));
 // app.use(express.json());
-app.get("/",(req,res)=>{
-    res.sendFile(path.join(__dirname,"../client/build","index.html"));
+app.post("/",(req,res)=>{
 });
-app.get("/cam",(req,res)=>{
-    res.sendFile(path.resolve(__dirname,"../client/build","index.html"));
+app.post("/cam",(req,res)=>{
 })
 // app.post("/l",(req,res)=>{
 //     const re=req.body;
@@ -48,6 +46,7 @@ app.get("/cam",(req,res)=>{
 // app.listen(3010,"localhost",()=>{
 //     console.log("Sucess");
 // })
-server.listen(3010,"localhost",()=>{
+const PORT=process.env.PORT||3010;
+server.listen(PORT,"0.0.0.0",()=>{
     console.log("Success");
 })
