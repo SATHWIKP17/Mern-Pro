@@ -10,7 +10,7 @@ const server=http.createServer(app);
 const io=new Server(server,{
     cors:{
         origin:'*',
-        methods:['GET']
+        methods:['GET','POST']
     }
 });
 app.use(express.static(path.join(__dirname,"../client/build")));
