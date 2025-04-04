@@ -47,7 +47,7 @@ app.get("*",(req,res)=>{
 // app.listen(3010,"localhost",()=>{
 //     console.log("Sucess");
 // })
-const PORT=process.env.PORT||3010;
+const PORT=process.env.PORT||10000;
 server.listen(PORT,"0.0.0.0",()=>{
     console.log("Success");
 })
