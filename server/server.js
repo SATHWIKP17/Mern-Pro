@@ -39,9 +39,9 @@ app.post("/cam",(req,res)=>{
 // app.post("/l",(req,res)=>{
 //     const re=req.body;
 // })
-// app.get("*",(req,res)=>{
-//     res.sendFile(path.resolve(__dirname,"../client/build","index.html"));
-// })
+app.get("*",(req,res)=>{
+    res.sendFile(path.resolve(__dirname,"../client/build","index.html"));
+})
 // app.post("/cam",(req,res)=>{
 // app.listen(3010,"localhost",()=>{
 //     console.log("Sucess");
