@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { io } from 'socket.io-client';
 import './App.css';
-const socket = io('http://localhost:3010',{ transports: ["websocket", "polling"] });
+const socket = io('https://mern-pro-4.onrender.com',{ transports: ["websocket", "polling"] });
 function Sh() {
     const [mess, setMess] = useState([]);
     const [input, setInput] = useState("");
