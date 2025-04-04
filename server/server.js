@@ -15,6 +15,7 @@ const io=new Server(server,{
 });
 app.use(express.static(path.join(__dirname,"../client/build")));
 app.use(express.json());
+app.use(cors());
 app.use(express.urlencoded({extended:true}));
 // admin.initializeApp({
 //     credential:admin.credential.cert(key)
