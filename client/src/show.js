@@ -42,7 +42,9 @@ function Sh() {
     //         m: "Hello This is Lokesh,Hope You Remembered Me"
     //     }
     // ]
-    const sorted=[...mess,...r_mess].sort((a,b)=>a.time-b.time);
+    const sorted = [...mess, ...r_mess].sort((a, b) => {
+    return new Date("1970/01/01 " + a.time) - new Date("1970/01/01 " + b.time);
+});
     return (
         <>
             <div className="dd">
