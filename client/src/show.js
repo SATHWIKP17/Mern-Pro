@@ -8,7 +8,7 @@ function Sh() {
     const[r_mess,setR_mess]=useState([]);  
     const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString());
     function on(e){
-        const nn={text:input,time:new Date().toLocaleTimeString()}
+        const nn={text:input,time:new Date()}
         setMess((prev)=>[...prev,nn]);
         setInput("");
         socket.emit("me",(nn));
@@ -44,7 +44,7 @@ function Sh() {
     // ]
 
 const sorted = [...mess, ...r_mess].sort((a, b) => {
-    return new Date(a.time) - new Date(b.time);
+    return new Date(b.time) - new Date(a.time);
 });
     return (
         <>
