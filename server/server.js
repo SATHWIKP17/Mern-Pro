@@ -18,7 +18,7 @@ app.use(express.json());
 app.use(cors({
         origin:'*',
         methods:['GET','POST']
-    ));
+}));
 app.use(express.urlencoded({extended:true}));
 // admin.initializeApp({
 //     credential:admin.credential.cert(key)
