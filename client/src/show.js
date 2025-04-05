@@ -52,7 +52,7 @@ const sorted = [...mess, ...r_mess].sort((a, b) => {
                 <header className="hh"><h1 className="hd">Let's Chat</h1></header>
                 <br/>
                 {sorted.map((i,index)=>(
-                    <div className={mess.includes(i) ? "hh3" : "hhhh1"}>
+                    <div className={mess.includes(i) ? "hh3" : "hhhh"}>
     {i.text}
   <footer className="fff">
     <small><sub>{new Date(i.time).toLocaleTimeString()}</sub></small>
