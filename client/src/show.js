@@ -52,13 +52,7 @@ const sorted = [...mess, ...r_mess].sort((a, b) => {
                 <header className="hh"><h1 className="hd">Let's Chat</h1></header>
                 <br/>
                 {sorted.map((i,index)=>(
-                    <div className={mess.includes(i) ? "hh3" : "hhhh"}>
-    {i.text}
-  <footer className="fff">
-    <small><sub>{new Date(i.time).toLocaleTimeString()}</sub></small>
-  </footer>
-</div>
-))}
+                    <div className={mess.includes(i)?"hh2":"hhhh"}><div className={mess.includes(i)?"hh3":"hhhh1"}>{i.text}<footer className="fff"><small><sub>{new Date(i.time).toLocaleTimeString()}</sub></small></footer></div></div>))}
                 <div className="iii">
                     <input className="iiiii" type="text" name="input" value={input} onChange={oon}/>
                     <button className="bb" type="submit" onClick={on}>🚀</button>
