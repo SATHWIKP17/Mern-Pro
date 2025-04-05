@@ -44,7 +44,7 @@ function Sh() {
     // ]
 
 const sorted = [...mess, ...r_mess].sort((a, b) => {
-    return new Date(b.time) - new Date(a.time);
+    return new Date(a.time) - new Date(b.time);
 });
     return (
         <>
