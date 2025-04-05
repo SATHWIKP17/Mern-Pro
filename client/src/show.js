@@ -44,9 +44,7 @@ function Sh() {
     // ]
     const sorted = [...mess, ...r_mess].sort((a, b) => {
     const today = new Date().toISOString().split("T")[0]; 
-    const dateA = new Date(`${today}T${a.time}`);
-    const dateB = new Date(`${today}T${b.time}`);
-    return dateA - dateB;
+    return new Date(today + a.time) - new Date(today + b.time);
 });
     return (
         <>
