@@ -1,7 +1,7 @@
 import React,{useState}from 'react';
 import {useNavigate} from 'react-router-dom';
 import io from 'socket.io-client';
-const socket=io('http://localhost:3001');
+const socket=io('http://localhost:10000');
 function In(){
     const [msg,setMsg]=useState("");
     const navigate=useNavigate();
