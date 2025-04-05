@@ -43,7 +43,8 @@ function Sh() {
     //     }
     // ]
     const sorted = [...mess, ...r_mess].sort((a, b) => {
-    return new Date("1970/01/01 " + a.time) - new Date("1970/01/01 " + b.time);
+        const today=new Date().toISOString().split("T")[0];
+    return new Date(today + a.time) - new Date(today + b.time);
 });
     return (
         <>
