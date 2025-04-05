@@ -8,7 +8,7 @@ function Sh() {
     const[r_mess,setR_mess]=useState([]);  
     const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString());
     function on(e){
-        const nn={text:input,time:currentTime}
+        const nn={text:input,time:new Date().toLocaleTimeString()}
         setMess((prev)=>[...prev,nn]);
         setInput("");
         socket.emit("me",(nn));
